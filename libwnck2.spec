@@ -5,12 +5,12 @@
 Summary:	General Window Manager interfacing for GNOME utilities
 Summary(pl.UTF-8):	Interfejs General Window Manager dla narzędzi GNOME
 Name:		libwnck2
-Version:	2.30.6
-Release:	2
+Version:	2.30.7
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libwnck/2.30/libwnck-%{version}.tar.bz2
-# Source0-md5:	323127c546d4b6796ae569f3da0892ab
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libwnck/2.30/libwnck-%{version}.tar.xz
+# Source0-md5:	3d20f26105a2fd878899d6ecdbe9a082
 BuildRequires:	autoconf >= 2.62
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	docbook-dtd412-xml
@@ -26,7 +26,10 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	sed >= 4.0
 BuildRequires:	startup-notification-devel >= 0.8
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXres-devel
+BuildRequires:	xz
 Requires:	gtk+2 >= 2:2.20.0
 # sr@Latn vs. sr@latin
 Conflicts:	glibc-misc < 6:2.7
@@ -42,11 +45,15 @@ częścią platformy GNOME 2.
 
 %package tools
 Summary:	Small tools to manage windows
+Summary(pl.UTF-8):	Małe narzędzia do zarządzania oknami
 Group:		X11/Window Managers/Tools
 Requires:	%{name} = %{version}-%{release}
 
 %description tools
 Small tools to manage windows.
+
+%description tools -l pl.UTF-8
+Małe narzędzia do zarządzania oknami.
 
 %package devel
 Summary:	Header files and documentation for libwnck
@@ -55,6 +62,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel >= 2:2.20.0
 Requires:	startup-notification-devel >= 0.8
+Requires:	xorg-lib-libX11-devel
 Requires:	xorg-lib-libXres-devel
 
 %description devel
