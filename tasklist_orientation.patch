@@ -5,6 +5,14 @@ Index: libwnck-2.30.3/libwnck/tasklist.c
 ===================================================================
 --- libwnck-2.30.3.orig/libwnck/tasklist.c	2010-08-16 19:49:35.885871012 +0200
 +++ libwnck-2.30.3/libwnck/tasklist.c	2010-08-17 00:06:53.550368075 +0200
+@@ -24,6 +24,7 @@
+ */
+ 
+ #undef WNCK_DISABLE_DEPRECATED
++#define WNCK_I_KNOW_THIS_IS_NOT_UPSTREAM
+ 
+ #include <config.h>
+ 
 @@ -234,6 +234,8 @@ struct _WnckTasklistPrivate
    GdkPixmap *background;
  
