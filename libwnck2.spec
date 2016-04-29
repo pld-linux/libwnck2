@@ -6,7 +6,7 @@ Summary:	General Window Manager interfacing for GNOME utilities
 Summary(pl.UTF-8):	Interfejs General Window Manager dla narzędzi GNOME
 Name:		libwnck2
 Version:	2.30.7
-Release:	3
+Release:	4
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libwnck/2.30/libwnck-%{version}.tar.xz
@@ -89,6 +89,9 @@ Summary:	libwnck API documentation
 Summary(pl.UTF-8):	Dokumentacja API libwnck
 Group:		Documentation
 Requires:	gtk-doc-common
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 libwnck API documentation.
