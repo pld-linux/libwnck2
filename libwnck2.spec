@@ -99,7 +99,7 @@ Dokumentacja API libwnck.
 
 %prep
 %setup -q -n libwnck-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__gtkdocize}
